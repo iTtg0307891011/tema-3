@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cola de Pedidos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <div class="container p-4">
+    <h1 class="mb-4">Pedidos en Cola</h1>
+
+    <!-- Formulario para nuevo pedido -->
+    <form method="post" class="mb-4">
+      <div class="input-group">
+        <input type="text" name="pedido" class="form-control" placeholder="Ej: Combo Clásico" required>
+        <button class="btn btn-success" type="submit">Agregar Pedido</button>
+      </div>
+    </form>
+
+    <!-- Lista de pedidos -->
+    {% if pedidos %}
+      <ul class="list-group mb-3">
+        {% for p in pedidos %}
+          <li class="list-group-item">{{ loop.index }}. {{ p }}</li>
+        {% endfor %}
+      </ul>
+      <form method="post">
+        <button name="accion" value="atender" class="btn btn-danger">Atender Siguiente Pedido</button>
+      </form>
+    {% else %}
+      <div class="alert alert-info">No hay pedidos en cola.</div>
+    {% endif %}
+
+    <a href="{{ url_for('menu') }}" class="btn btn-secondary mt-3">← Volver</a>
+  </div>
+</body>
+</html>
