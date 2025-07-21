@@ -1,7 +1,7 @@
 # Venta de Hamburguesas – Cola y Pila
 
-**Nombre del alumno:** Oswaldo Martínez Vidaña  
-**Grupo/Materia:** [Grupo] / [Materia]
+**Nombre del alumno:** Sergio Alexander Antonio Gracida
+**Grupo/Materia:** Estructuras de Datos / Pilas y Colas para sistemas de apoyo
 
 ---
 
